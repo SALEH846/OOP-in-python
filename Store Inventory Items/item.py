@@ -11,10 +11,24 @@ class Item:
 
         # Instance variables
         self.__name = name
-        self.price = price
+        self.__price = price
         self.quantity = quantity
 
         Item.all.append(self)
+
+    @property
+    def price(self):
+        return self.__price
+
+    def apply_discount(self):
+        self.__price = self.__price * self.pay_rate
+
+    def apply_increment(self, increment_value):
+        self.__price = self.__price + self.__price * increment_value
+
+    @price.setter
+    def price(self, value):
+        self.__price = value
 
     @property
     # Property decorator = Read-only Attribute
@@ -28,10 +42,7 @@ class Item:
         self.__name = value
 
     def total_price(self):
-        return self.price * self.quantity
-
-    def apply_discount(self):
-        self.price = self.price * self.pay_rate
+        return self.__price * self.quantity
 
     # converting this method from instance method to class method because we want it to call before an instance is 
     # created
