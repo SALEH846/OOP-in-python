@@ -1,0 +1,12 @@
+1. Encapsulation:
+It refers to a mechanism of restricting the direct access to some of the attributes in the program.
+
+2. Abstraction:
+Only 'show' necessary attributes(details) and 'hide' the unnecessary information from user. 
+
+3. Inheritance:
+It is the procedure in which one class inherits the attributes of another class.
+
+4. Polymorphism: (= many forms)
+IT is the method in object-oriented programming that performs different things as per the object’s class, which calls it.
+Example: 'len' function in python because it knows how to handle different kind of objects
